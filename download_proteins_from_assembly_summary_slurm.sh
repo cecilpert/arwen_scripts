@@ -1,5 +1,5 @@
 if [[ $# -ne 3 ]]; then
-    echo "usage : bash download_from_assembly_summary.sh <assembly_summary file> <download directory> <volumes size>"
+    echo "usage : bash download_proteins_from_assembly_summary_slurm.sh <assembly_summary file> <download directory> <volumes size>"
     exit
 fi
 
