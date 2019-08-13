@@ -1,7 +1,7 @@
 # arwen_scripts
 Little scripts working on arwen, mostly using slurm to manage data. 
 
-* `add_fasta_id.py`
+### `add_fasta_id.py`
 
 Script to add some id information in fasta header.  
 Example :
@@ -15,7 +15,7 @@ Header will become
 python add_fasta_id.py <.fasta.gz file> <id to add>
 ```
 
-* `concatenate_volumes_slurm.sh`
+### `concatenate_volumes_slurm.sh`
 
 For each volume* directory inside given directory, concatenate all .gz files inside and write in output directory. 
 
@@ -24,7 +24,7 @@ For each volume* directory inside given directory, concatenate all .gz files ins
 bash concatenate_volumes_slurm.sh <volumes directory> <output directory>
 ```
 
-* `download_assembly_summary_proteins.sh`
+### `download_assembly_summary_proteins.sh`
 
 Script to download *_protein.faa.gz files from ncbi ftp for assemblies in assembly_summary given file. Also use `add_fasta_id.py` to add assembly accession inside fasta header. 
 
@@ -33,7 +33,7 @@ Script to download *_protein.faa.gz files from ncbi ftp for assemblies in assemb
 bash download_assembly_summary_proteins.sh <assembly_summary file> <output directory>
 ````
 
-* `download_proteins_from_assembly_summary_slurm.sh`
+### `download_proteins_from_assembly_summary_slurm.sh`
 
 Divide download work in several sbatch scripts and launch this scripts. You can precise size of volumes (number of assemblies per volume). Use `download_assembly_summary_proteins.sh` script.
 
@@ -42,7 +42,8 @@ Divide download work in several sbatch scripts and launch this scripts. You can 
 bash download_proteins_from_assembly_summary_slurm.sh <assembly_summary file> <download directory> <volumes size>
 ````
 
-* `verif_download.sh`
+### `verif_download.sh`
+
 Look inside volumes if some .gz file are empty (have a size of 512). Print them to stdout
 
 **Usage :**
