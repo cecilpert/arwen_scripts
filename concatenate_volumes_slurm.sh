@@ -1,5 +1,3 @@
-'''Concatenate .gz files inside volumes'''
-
 if [[ $# -ne 2 ]]; then
     echo "usage: bash concatenate_volumes_slurm.sh <volumes directory> <output directory>"
     exit
